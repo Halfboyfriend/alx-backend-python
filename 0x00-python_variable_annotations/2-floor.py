@@ -3,4 +3,9 @@ import math
 
 
 def floor(n: float) -> int:
+    """
+
+    :param n:
+    :return:
+    """
     return math.floor(n)

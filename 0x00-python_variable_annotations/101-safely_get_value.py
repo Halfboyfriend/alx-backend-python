@@ -1,12 +1,23 @@
 #!/usr/bin/env python3
-from typing import Dict, Any, TypeVar
+"""
+Task 11
+"""
+from typing import Dict, Any, TypeVar, Mapping, Union
 
 K = TypeVar('K')
-V = TypeVar('V')
+Result = Union[Any, K]
+Dev = Union[K, None]
 
 
-def safely_get_value(dct: Dict[K, V], key: K, default: V = None) -> V:
-    if key in dct:
-        return dct[key]
+def safely_get_value(dc: Mapping, key: Any, default: Dev = None) -> Result:
+    """
+
+    :param dct:
+    :param key:
+    :param default:
+    :return:
+    """
+    if key in dc:
+        return dc[key]
     else:
         return default
