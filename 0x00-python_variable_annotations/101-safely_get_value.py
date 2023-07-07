@@ -2,14 +2,15 @@
 """
 Task 11
 """
-from typing import Dict, Any, TypeVar, Mapping, Union
-
-K = TypeVar('K')
-Result = Union[Any, K]
-Dev = Union[K, None]
+from typing import Any, Mapping, Union, TypeVar
 
 
-def safely_get_value(dc: Mapping, key: Any, default: Dev = None) -> Result:
+T = TypeVar('T')
+Res = Union[Any, T]
+Def = Union[T, None]
+
+
+def safely_get_value(dct: Mapping, key: Any, default: Def = None) -> Res:
     """
 
     :param dct:
@@ -17,7 +18,7 @@ def safely_get_value(dc: Mapping, key: Any, default: Dev = None) -> Result:
     :param default:
     :return:
     """
-    if key in dc:
-        return dc[key]
+    if key in dct:
+        return dct[key]
     else:
         return default
