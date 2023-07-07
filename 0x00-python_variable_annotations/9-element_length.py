@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
-from typing import List, Tuple
+'''
+Annotate the below function’s parameters and return values
+ with the appropriate types.
+'''
+from typing import Iterable, List, Sequence, Tuple
 
 
-def element_length(lst: List[str]) -> List[Tuple[str, int]]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    '''
+
+    :param lst: Annotate the below function’s parameters and return values
+     with the appropriate types
+    :return: list
+    '''
+
     return [(i, len(i)) for i in lst]
